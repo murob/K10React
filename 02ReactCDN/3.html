@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv1"></div>
+    <div id="myDiv2"></div>
+    <div id="myDiv3"></div>
+    <div id="myDiv4"></div>
+
+    <script type="text/babel">
+        const a = <h4>조아용</h4>;
+        ReactDOM.render(a, document.getElementById("myDiv1"));
+
+        const b = React.createElement('h4', {}, '뭐고이게');
+        ReactDOM.render(b, document.getElementById("myDiv2"));
+
+        const c = <h4>표현식 : {5+5}</h4>;
+        ReactDOM.render(c, document.getElementById("myDiv3"));
+
+        const d = (
+            <ul>
+                <li>사과</li>
+                <li>딸기</li>
+                <li>포도</li>
+                <li>배</li>
+            </ul>
+        );
+        ReactDOM.render(d, document.getElementById("myDiv4"));
+    </script>
+</body>
+</html>

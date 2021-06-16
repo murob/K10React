@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="myId1"></div>    
+    <div id="myId2"></div>    
+
+    <script type="text/babel">
+        const a = (
+            <table>
+                <tr>
+                    <td>꺄륵</td>
+                </tr>
+                <tr>
+                    <td>투스</td>
+                </tr>
+                <tr>
+                    <td>꺄르르</td>
+                </tr>    
+            </table>
+        );
+
+        class Bclass extends React.Component{
+            render(){
+                return <h4>꺄르르르툭스</h4>
+            }
+        }
+        ReactDOM.render(a, document.getElementById("myId1"));
+        ReactDOM.render(<Bclass/>, document.getElementById("myId2"));
+
+        
+    </script>
+</body>
+</html>

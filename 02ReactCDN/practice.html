@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="here"></div>
+    <script type="text/babel">
+        class Com extends React.Component {
+            render(){
+                return(
+                    <h4>나는 {this.props.company}를 설립했습니다.</h4>
+                );
+            }
+        }
+
+        class Me extends React.Component {
+            render(){
+                const name = "승현컴퍼니";
+                return(
+                    <div>
+                        <h4>나는 {this.props.myName}입니다.</h4>
+                        <Com company={name}/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<Me myName="성승현"/>, document.getElementById("here"));
+    </script>
+
+    <span>============================================================</span>
+
+    <div id="here2"></div>
+    <script type="text/babel">
+        class Univ extends React.Component {
+            render(){
+                return(
+                    <div>
+                        <h4>전공 : {this.props.univ.major}</h4>    
+                        <h4>학년 : {this.props.univ.grade}</h4>
+                    </div>
+                );
+            }
+        }
+
+        class Me extends React.Component {
+            render(){
+                const me = {major : "광고홍보", grade : "졸업생"}
+                return(
+                    <div>
+                        <h4>성명 : {this.props.name}</h4>
+                        <Univ univ={me}/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<Me name="성승현"/>, document.getElementById("here2"));
+    </script>
+</body>
+</html>
