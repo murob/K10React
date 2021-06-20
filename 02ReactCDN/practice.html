@@ -62,5 +62,36 @@
         }
         ReactDOM.render(<Me name="성승현"/>, document.getElementById("here2"));
     </script>
+
+    <span>================================================================</span>
+
+    <div id="here3"></div>
+    <script type="text/babel">
+        class Location extends React.Component {
+            constructor(){
+                super();
+                this.state = {
+                    gu : "금천구",
+                    dong : "시흥동",
+                    apt : "벽산아파트",
+                    danji : "5단지"
+                };
+            }
+
+            render(){
+                return(
+                    <div>
+                        <h4>내가 사는 곳은</h4>
+                        <h4>{this.state.gu}</h4>
+                        <h4>{this.state.dong}</h4>
+                        <h4>{this.state.apt}</h4>
+                        <h4>{this.state.danji}</h4>
+                        <h4>입니다.</h4>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Location />, document.getElementById("here3"));
+    </script>
 </body>
 </html>
